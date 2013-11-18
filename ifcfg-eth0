@@ -1,0 +1,8 @@
+DEVICE="eth0"
+BOOTPROTO="static"
+HWADDR="00:16:31:FE:E4:0A"
+IPV6INIT="no"
+NM_CONTROLLED="yes"
+ONBOOT="yes"
+TYPE="Ethernet"
+UUID="c34def65-3ecc-41cd-8f33-b0304f82f7aa"

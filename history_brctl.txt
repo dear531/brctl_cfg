@@ -1,0 +1,130 @@
+    1  cd /etc
+    2  cd sysconfig/
+    3  ls
+    4  vi network
+    5  sync
+    6  exit
+    7  reboot
+    8  passwd
+    9  exit
+   10  ifconfig -a
+   11  lspci
+   12  sync
+   13  cd /etc/sysconfig/
+   14  cd network-scripts/
+   15  vi ifcfg-eth0
+   16  sync
+   17  ps ax
+   18  vi ifcfg-eth0
+   19  reboot
+   20  ps ax
+   21  ifconfig
+   22  ifconfig -a
+   23  cd /etc/sysconfig/network-scripts/
+   24  vi ifcfg-eth0
+   25  reboot
+   26  ifconfig
+   27  lsmod
+   28  init 0
+   29  cd /etc
+   30  cd sysconfig/
+   31  cd network-scripts/
+   32  vi ifcfg-eth0
+   33  reboot
+   34  ifconfig
+   35  lspci
+   36  dmesg
+   37  dmesg | grep eth0
+   38  ethtool  eth0
+   39  ethtool  eth1
+   40  ethtool  eth2
+   41  ethtool  eth0
+   42  ifconfig eth0 down
+   43  ifconfig eth0 up
+   44  ifconfig
+   45  ifconfig 
+   46  ethtool  eth0
+   47  ethtool  eth1
+   48  ethtool  eth2
+   49  ethtool  eth0
+   50  vi /etc/sysconfig/network-scripts/ifcfg-eth0
+   51  service network restart
+   52  ethtool eth0
+   53  ps ax
+   54  \
+   55  kill 1795
+   56  ps ax
+   57  kill 1837
+   58  ifconfig
+   59  rpm -e e1000e
+   60  ls -l
+   61  ifconfig
+   62  rmmod e1000e
+   63  modprobe e1000e
+   64  ifconfig
+   65  ifconfig eth1 up
+   66  ifconfig
+   67  ethtool eth1
+   68  ethtool eth2
+   69  dhclient eth2
+   70  ifconfig
+   71  dhclient eth2
+   72  ifconfig eth2 192.168.2.101 netmask 255.255.255.0
+   73  ping 192.168.2.254
+   74  dmesg
+   75  modinfo e100e
+   76  modinfo e1000e
+   77  ifconfig
+   78  ifconfig eth2 up
+   79  dhclient eth2
+   80  ifconfig
+   81  brctl addbr br0
+   82  brctl addif br0 eth0
+   83  brctl addif br0 eth1
+   84  brctl show br0
+   85  ethtool  eth0
+   86  ethtool  eth1
+   87  ifconfig eth1 up
+   88  ethtool  eth1
+   89  ifconfig
+   90  ps ax
+   91  kill 1580
+   92  vi /etc/sysconfig/network-scripts/ifcfg-eth2
+   93  vi /etc/sysconfig/network-scripts/ifcfg-eth0
+   94  vi /etc/sysconfig/network-scripts/ifcfg-eth1
+   95  vi /etc/sysconfig/network-scripts/ifcfg-eth0
+   96  vi /etc/rc.local 
+   97  which brctl
+   98  vi /etc/rc.local 
+   99  ifconfig
+  100  brctl br0 up
+  101  brctl showstp
+  102  brctl showstp br0
+  103  ifconfig br0 up
+  104  ifconfig
+  105  vi /etc/rc.local 
+  106  ifconfig
+  107  ifconfig eth1 192.168.1.5 netmask 255.255.255.0
+  108  ping 192.168.1.2
+  109  ifconfig
+  110  ping 192.168.1.2
+  111  ping 192.168.1.52
+  112  arp -a
+  113  ifconfig
+  114  ifconfig br0 192.168.1.6 netmask 255.255.255.0
+  115  ping 192.168.1.52
+  116  ifconfig eth1
+  117  ifconfig eth1 down
+  118  ifconfig eth0 down
+  119  ifconfig br0 down
+  120  brctl delif br0 eth0
+  121  brctl delif br0 eth1
+  122  ifconfig
+  123  ifconfig eth1
+  124  ifconfig eth1 up
+  125  dhclient eth1
+  126  ifconfig
+  127  ping 192.168.1.2
+  128  ls
+  129  ifconfig 
+  130  history > history.txt

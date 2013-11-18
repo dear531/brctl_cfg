@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# This script will be executed *after* all the other init scripts.
+# You can put your own initialization stuff in here if you don't
+# want to do the full Sys V style init stuff.
+
+touch /var/lock/subsys/local
+
+/usr/sbin/brctl addbr br0
+/sbin/ifconfig br0 up
+/usr/sbin/brctl addif br0 eth0
+/usr/sbin/brctl addif br0 eth1
